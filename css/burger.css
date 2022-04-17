@@ -1,0 +1,103 @@
+.burger {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+@media (max-width: 767.98px) {
+  .burger {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 24px;
+    position: absolute;
+    height: 14px;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    margin-top: 28px;
+    margin-right: 30px;
+  }
+  .burger::before, .burger::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 2px;
+    right: 0;
+  }
+  .burger::before {
+    width: 100%;
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0%;
+    right: 0;
+    width: 100%;
+  }
+  .burger span {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 2px;
+    top: 6px;
+    background-color: black;
+  }
+
+  .navbar-menu {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .navbar__logo {
+    margin: 15px 30px;
+  }
+
+  .navbar__container {
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+    -webkit-box-pack: none;
+        -ms-flex-pack: none;
+            justify-content: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0;
+            flex: 0 0;
+  }
+}
+.burger-active::before {
+  top: 6px;
+  -webkit-transform: rotate(38deg);
+          transform: rotate(38deg);
+}
+.burger-active::after {
+  bottom: 6px;
+  -webkit-transform: rotate(-38deg);
+          transform: rotate(-38deg);
+}
+.burger-active span {
+  display: none;
+}
+
+.navbar-menu-active {
+  pointer-events: auto;
+  z-index: 4;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgray;
+}
