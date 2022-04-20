@@ -9,9 +9,8 @@ body{
    align-items: center;
    width: 100%;
    height: 100%;
-   overflow-x: hidden;
-   overflow-y: hidden;
    justify-content: space-around;
+   overflow: scroll !important;
 }
 ul,li{
    list-style: none;
