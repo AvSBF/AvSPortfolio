@@ -1,6 +1,7 @@
 * {
    margin: 0;
    padding: 0;
+   transition: all 0.3s ease 0s;
 }
 body{
    font-family: Poppins;
@@ -118,6 +119,9 @@ a{
    border-radius: 10px;
    background-color: #8BC6EC;
    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+   &:hover{
+      transform: scale(1.02);
+   }
 }
 .callbacks-message-vk__item__link {
    transition: all 0.3s ease 0s;
@@ -138,4 +142,11 @@ a{
 .his-message {
    padding-top: 7px;
    font-family: Montserrat;
+}
+.character__main-title{
+   color: white;
+   text-transform: uppercase;
+   font-size: 40px;
+   padding-bottom: 20px;
+   text-shadow: 4px 7px 6px rgba(0,0,0,0.6);
 }
